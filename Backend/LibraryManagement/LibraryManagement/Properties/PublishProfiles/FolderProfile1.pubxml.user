@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>D:\MyPublishedApi\LibraryManagement_Api</_PublishTargetUrl>
+    <History>False|2024-12-02T06:52:11.9703958Z||;True|2024-11-08T14:19:27.2794500+07:00||;True|2024-11-08T14:19:22.6521259+07:00||;True|2024-11-08T14:18:46.6180405+07:00||;True|2024-11-08T13:21:28.0545369+07:00||;True|2024-11-08T13:21:18.9757846+07:00||;True|2024-11-08T13:21:09.3769920+07:00||;False|2024-11-08T13:09:11.9222274+07:00||;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+</Project>
