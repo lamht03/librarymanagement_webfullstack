@@ -1,0 +1,122 @@
+.Footer {
+  width: 100vw;
+  height: 12vh;
+  border-top: 1px solid #e0e0e0;
+  background: linear-gradient(90deg, #00c5fc,#fffb8bdb, #00ff80);
+  display: flex;
+  justify-content: center; /* Căn giữa các phần theo chiều ngang */
+  align-items: center; /* Căn giữa các phần theo chiều dọc */
+  position: fixed;
+  bottom: 0;
+  z-index: 100;
+  font-family: serif;
+  font-size: 12px;
+  gap: 20px; /* Tăng khoảng cách giữa các phần */
+  margin-bottom: 0;
+}
+
+/* Phần bên trái */
+.Footer-Left {
+  flex: 1;
+  display: flex;
+  font-size: 12px !important;
+  line-height: 2.5;
+  color: white;
+  align-items: center;
+  flex-direction: column; /* Hiển thị theo cột */
+  justify-content: center;
+}
+
+.Contact-Item {
+  display: flex;
+  align-items: center; /* Căn thẳng hàng theo chiều dọc */
+  gap: 10px; /* Khoảng cách giữa icon và text */
+  color: #000;
+}
+
+/* Icon */
+.Contact-Item i {
+  font-size: 16px; /* Kích thước icon */
+  color: #f2ffbc; /* Màu icon */
+  margin-left: 10px;
+}
+
+
+.Contact-Item a {
+  text-decoration: none;
+  color: #000;
+}
+
+.Contact-Item :hover {
+  text-decoration: underline;
+  color: #e6ffa0;
+  font-size: 12px;
+  font-weight: bolder;
+  transition: color 0.3s ease-in-out; /* Hiệu ứng chuyển đổi màu mượt */
+}
+
+/* Phần giữa: Copyright và Logo */
+.Footer-Center {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Footer-Copyright {
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+
+.Footer-Link {
+  color: #030303;
+  text-decoration: none;
+  margin: 0 5px;
+  font-size: 12px;
+}
+
+.Footer-Link:hover {
+  text-decoration: underline;
+  color: #bf0625;
+  transition: color 0.3s ease-in-out; /* Hiệu ứng chuyển đổi màu mượt */
+}
+
+.Footer-Img {
+  width: 50px;
+  height: auto;
+}
+
+
+/* Phần bên phải: Quick Links */
+.Footer-Right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Footer-QuickLinks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.Footer-QuickLinks li {
+  margin: 10px 0;
+}
+
+.Footer-Link i {
+  margin-right: 8px;
+  font-size: 17px;
+  color: #f4f4f4;
+  transition: transform 0.3s;
+}
+
+.Footer-Link:hover i {
+  transform: scale(1.2);
+  color: #fffd85;
+}

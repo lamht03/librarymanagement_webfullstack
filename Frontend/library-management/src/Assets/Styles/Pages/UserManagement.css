@@ -1,0 +1,21 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Tăng chiều cao layout */
+}
+
+.main {
+  display: flex;
+  flex: 1; /* Cho phép nội dung bên trong có thể mở rộng theo chiều dọc */
+  margin-bottom: 4vh; /* Căn trên footer */
+}
+
+.content {
+  flex: 1; /* Chiếm toàn bộ không gian còn lại */
+  overflow-y: auto; 
+  overflow-x: hidden;
+}
+
+.layout .sidebar {
+  flex: 0 0 200px; /* Sidebar chiếm 200px */
+}

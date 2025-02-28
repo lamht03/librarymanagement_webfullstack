@@ -1,0 +1,108 @@
+.custom-modal {
+  margin-top: -50px !important;
+}
+
+
+.custom-modal .ant-modal-header {
+  background: linear-gradient(90deg, #00c5fc, #fffb8b, #00ff80);
+  border-radius: 50px;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.custom-modal .ant-modal-body {
+  font-family: 'Courier New', Courier, monospace;
+  padding: 20px;
+}
+
+.custom-modal .ant-modal-footer {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #e0e0e0;
+  padding: 10px 20px;
+  border-radius: 50px;
+  background: linear-gradient(90deg, #00c5fc, #fffb8b, #00ff80);
+}
+
+.ant-modal-footer .ant-btn {
+  border-radius: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #00c8ff;
+  color: #ffffff;
+  font-weight: bold;
+  width: 80px;
+  height: 30px;
+  padding: 8px;
+  font-size: 15px;
+  border: 0.2px solid;
+}
+
+.custom-modal .ant-modal-close-x {
+  color: #ff4747;
+}
+
+.custom-modal .ant-form-item-label {
+  font-weight: bold;
+  font-size: 14px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.custom-modal .ant-input {
+  border-radius: 15px;
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  font-size: 14px;
+  transition: border 0.3s ease;
+}
+
+.ant-input:focus {
+  border-color: #1890ff;
+}
+
+.custom-modal .ant-btn-primary:hover {
+  background-color: #ffffff !important;
+  border-color: #00e1ff;
+  color: #00e1ff !important;
+}
+
+/* Styles for the delete confirmation modal */
+.delete-modal .ant-modal-header {
+  background-color: #ff4d4f;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.delete-modal .ant-modal-body {
+  font-family: 'Courier New', Courier, monospace;
+  padding: 20px;
+  text-align: center;
+}
+
+.delete-modal .ant-modal-footer {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #e0e0e0;
+  padding: 10px 20px;
+  background-color: #ff4d4f;
+}
+
+.delete-modal .ant-btn {
+  border-radius: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #ff7875;
+  color: #ffffff;
+  font-weight: bold;
+  width: 80px;
+  height: 30px;
+  padding: 8px;
+  font-size: 15px;
+  border: 0.2px solid;
+}
+
+.delete-modal .ant-btn:hover {
+  background-color: #ff4d4f;
+  border-color: #ff4d4f;
+} 

@@ -1,0 +1,79 @@
+/* Form Styling */
+.Login-Form {
+  width: 100%;
+  max-width: 350px; 
+  text-align: center;
+}
+
+/* Input Styling */
+.Styled-Input {
+  border-radius: 8px;
+  box-shadow: 0px 0px 5px rgba(0, 119, 182, 0.2);
+  transition: box-shadow 0.5s ease;
+  font-size: 16px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.Styled-Input:focus {
+  box-shadow: 0px 0px 10px rgba(0, 119, 182, 0.4);
+}
+
+/* Button Styling */
+.Login-Button {
+  background-color: #3da9fc;
+  border-color: #3da9fc;
+  font-weight: bold;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  font-size: 16px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.Login-Button:hover,
+.Login-Button:focus {
+  background-color: #7ad0ff;
+  border-color: #85d4ff;
+  box-shadow: 0 5px 10px rgba(0, 119, 182, 0.4);
+}
+
+/* Forgot Password Link */
+.Forgot-Password-Link {
+  font-size: 12px;
+  color: #36b9ff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.Forgot-Password-Link:hover {
+  color: #06b0ff;
+  text-decoration: underline;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+/* Custom Form Item (added missing part) */
+
+/* Pen and Book Animations for Icons */
+.custom-form-item {
+  margin-bottom: 0px !important; /* Tùy chỉnh khoảng cách của riêng bạn */
+}
+
+/* Switch Mode */
+.Switch-Mode {
+  margin-top: 10px;
+  color: #000000;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.Switch-Mode span {
+  color: #06a1fb;
+}
+
+.Switch-Mode span:hover {
+  text-decoration: underline;
+  font-weight: bold;
+}
+

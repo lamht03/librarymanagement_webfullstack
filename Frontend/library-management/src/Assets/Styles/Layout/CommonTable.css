@@ -1,0 +1,153 @@
+/* Cập nhật cho CommonTable */
+.common-table-container {
+  display: flex;
+  background: linear-gradient(90deg, #f8d6d6, rgb(206, 251, 206), rgb(202, 241, 249));
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  height: 100vh;
+  width: 100vw;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.table-header {
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.table-title {
+  font-size: 30px;
+  color: #18c5ffe4;
+  font-family: 'Courier New', Courier, monospace;
+  margin: 0;
+  margin-left: 160px;
+}
+
+.search-input {
+  display: flex;
+  width: 40vw;
+  border-radius: 20px;
+  padding: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-input::placeholder {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.add-btn {
+  background-color: #91fbff;
+  border-color: #88c6ff;
+  align-self: flex-end;
+  margin-left: 2px;
+}
+
+.table-container {
+  height: 60vh;
+  width: 90vw;
+  padding: 15px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.styled-table .ant-table-thead > tr > th {
+  background-color: #91fbff;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  padding: 12px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.styled-table .ant-table-tbody > tr > td {
+  text-align: center;
+  font-size: 14px;
+  color: #000000;
+  padding: 10px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.styled-table .ant-table-bordered .ant-table-cell {
+  border: 1px solid rgb(98, 96, 96);
+}
+
+.styled-table .ant-table-footer {
+  border-top: 2px solid #f0f0f0;
+}
+
+.ant-table-tbody > tr:hover > td {
+  background-color: #b3f2ff !important;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.action-button {
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  padding: 6px 12px;
+}
+
+.edit-btn {
+  background-color: #1890ff;
+  color: white;
+  border-color: #1890ff;
+}
+
+.edit-btn:hover {
+  background-color: #80c6ff;
+  border-color: #40a9ff;
+}
+
+.delete-btn {
+  background-color: #f88789;
+  color: white;
+  border-color: #ff4d4f;
+}
+
+.delete-btn:hover {
+  background-color: #ff7875;
+  border-color: #ff7875;
+}
+
+.styled-table .ant-table-thead th, .styled-table .ant-table-tbody td {
+  border: 1px solid #e1e4e8;
+}
+
+.ant-btn-primary, .ant-btn-danger {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.ant-table-container {
+  border: 1px solid rgb(98, 96, 96);
+  box-shadow: 0 4px 12px rgba(254, 255, 185, 0.283);
+}
+
+.pagination {
+  text-align: right;
+  margin-top: 20px;
+}
+
+.ant-pagination-item:hover {
+  background-color: #32c8ff !important;
+  color: #ffffff !important;
+}
+
+.ant-pagination-item-active {
+  background-color: #ffffff !important;
+  color: #65d1ff !important;
+}
+
+:where(.css-dev-only-do-not-override-apn68).ant-input {
+  font-family: 'Courier New', Courier, monospace;
+}

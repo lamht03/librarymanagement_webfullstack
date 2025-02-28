@@ -1,0 +1,22 @@
+/* Header Title */
+.Header-Title {
+  font-family: 'Pacifico', cursive;
+  color: #00e5ff;
+  margin-bottom: 20px;
+  text-align: center;
+  padding-bottom: 20px;
+  text-shadow: 3px 3px 5px rgba(230, 255, 40, 0.3), 0px 0px 10px rgba(131, 211, 255, 0.6);
+  font-size: 30px;
+}
+
+.Header-Title i {
+  margin-left: 5px;
+}
+
+.icon-pen {
+  animation: pen-animation 1s ease-in-out infinite;
+}
+
+.icon-book {
+  animation: book-animation 1s ease-in-out infinite;
+}

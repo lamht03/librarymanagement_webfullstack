@@ -1,0 +1,423 @@
+/* Import Fonts and Libraries */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+
+/* Global Styles (for placeholder and keyframes animations) */
+.Styled-Input::placeholder {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  color: #b0b0b0;
+  opacity: 1;
+}
+
+/* Keyframes for Animations */
+@keyframes pen-animation {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes book-animation {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #0066cc, 0 0 10px #0066cc, 0 0 15px #3da9fc, 0 0 20px #3da9fc;
+  }
+  to {
+    text-shadow: 0 0 10px #0066cc, 0 0 15px #3da9fc, 0 0 20px #3da9fc, 0 0 30px #3da9fc;
+  }
+}
+
+@keyframes fade-in-smooth {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Main Container Styles */
+.Login-Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: url('../Images/Img_Background_Tdu.png') no-repeat center center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+.Login-Container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 119, 182, 0.4);
+  backdrop-filter: blur(2px);
+  z-index: 1;
+}
+
+/* Login Wrapper */
+.Login-Wrapper {
+  display: flex;
+  width: 90%; /* Giảm chiều rộng để phù hợp với các màn hình nhỏ */
+  max-width: 800px;
+  height: auto;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  position: relative;
+  border-radius: 50px;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.85);
+  flex-direction: row; /* Bố cục hàng ngang mặc định */
+}
+
+/* Login Form Section */
+.Login-Form-Side {
+  width: 50%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background-color: #fff;
+}
+
+.Login-Logo {
+  width: 90px;
+  height: auto;
+  animation: float 2s ease-in-out infinite;
+  margin-top: 10px;
+}
+
+.Image-Side {
+  width: 70%;
+  background: hsl(0, 0%, 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.BuildingA-Image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 400px 0 0 400px;
+  object-position: 70% 40%;
+}
+
+/* Form Styling */
+.Login-Form {
+  width: 100%;
+  max-width: 350px; 
+  text-align: center;
+}
+
+/* Header Title */
+.Header-Title {
+  font-size: 35px;
+  font-family: 'Pacifico', cursive;
+  color: #00e5ff;
+  margin-bottom: 20px;
+  text-align: center;
+  padding-bottom: 20px;
+  text-shadow: 3px 3px 5px rgba(230, 255, 40, 0.3), 0px 0px 10px rgba(131, 211, 255, 0.6);
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+.Header-Title i {
+  margin-left: 5px;
+}
+
+/* Input Styling */
+.Styled-Input {
+  border-radius: 8px;
+  box-shadow: 0px 0px 5px rgba(0, 119, 182, 0.2);
+  transition: box-shadow 0.5s ease;
+  font-size: 16px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.Styled-Input:focus {
+  box-shadow: 0px 0px 10px rgba(0, 119, 182, 0.4);
+}
+
+/* Button Styling */
+.Login-Button {
+  background-color: #3da9fc;
+  border-color: #3da9fc;
+  font-weight: bold;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  font-size: 16px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.Login-Button:hover,
+.Login-Button:focus {
+  background-color: #7ad0ff;
+  border-color: #85d4ff;
+  box-shadow: 0 5px 10px rgba(0, 119, 182, 0.4);
+}
+
+/* Forgot Password Link */
+.Forgot-Password-Link {
+  font-size: 12px;
+  color: #36b9ff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.Forgot-Password-Link:hover {
+  color: #06b0ff;
+  text-decoration: underline;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+/* Quote Section */
+.Quote-Container {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #e0e0e0;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.Quote-Text {
+  display: block;
+  font-size: 17px;
+  font-style: italic;
+  color: #003366;
+  margin-bottom: 3px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  animation: fade-in 2s ease-in-out;
+  font-family: 'Lobster', cursive;
+}
+
+.Quote-Author {
+  font-size: 13px;
+  color: #0066cc;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  animation: fade-in 2.5s ease-in-out;
+}
+
+/* Fade In Effect for Various Elements */
+.Login-Wrapper,
+.Login-Form-Side,
+.Image-Side,
+.Login-Logo,
+.Header-Title,
+.Styled-Input,
+.Login-Button,
+.Forgot-Password-Link,
+.Quote-Container {
+  opacity: 0;
+  animation: fade-in-smooth 1s ease-in-out forwards;
+}
+
+.Login-Wrapper {
+  animation-delay: 0.1s;
+}
+
+.Login-Form-Side {
+  animation-delay: 0.2s;
+}
+
+.Image-Side {
+  animation-delay: 0.3s;
+}
+
+.Login-Logo {
+  animation-delay: 0.4s;
+}
+
+.Header-Title {
+  animation-delay: 0.5s;
+}
+
+.Styled-Input {
+  animation-delay: 0.6s;
+}
+
+.Login-Button {
+  animation-delay: 0.7s;
+}
+
+.Forgot-Password-Link {
+  animation-delay: 0.8s;
+}
+
+.Quote-Container {
+  animation-delay: 0.9s;
+}
+
+/* Custom Form Item (added missing part) */
+.icon-pen {
+  animation: pen-animation 1s ease-in-out infinite;
+}
+
+.icon-book {
+  animation: book-animation 1s ease-in-out infinite;
+}
+
+/* Pen and Book Animations for Icons */
+.custom-form-item {
+  margin-bottom: 0px !important; /* Tùy chỉnh khoảng cách của riêng bạn */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .Login-Wrapper {
+    flex-direction: column;
+    width: 80%;
+    height: auto;
+    border-radius: 50px;
+  }
+
+  .Login-Form-Side {
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .Login-Form{
+    margin-right: 35px;
+  }
+
+  .Image-Side {
+    display: none;
+  }
+
+  .Header-Title {
+    font-size: 28px;
+  }
+
+  .Styled-Input, .Login-Button {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .Header-Title {
+    font-size: 16px;
+  }
+
+  .Styled-Input, .Login-Button {
+    font-size: 12px;
+  }
+
+  .Quote-Text {
+    font-size: 12px;
+  }
+
+  .Quote-Author {
+    font-size: 11px;
+  }
+}
+
+/* Switch Mode */
+.Switch-Mode {
+  margin-top: 10px;
+  color: #000000;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.Switch-Mode span {
+  color: #06a1fb;
+}
+
+.Switch-Mode span:hover {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/* Fade Out Effect */
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* ForgotPasswordModal.css */
+
+.forgot-password-modal .ant-modal-content {
+  border-radius: 12px;
+  background-color: #f0f9ff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.forgot-password-modal .ant-modal-header {
+  background-color: #3da9fc;
+  color: #fff;
+  text-align: center;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.forgot-password-modal .forgot-password-text {
+  color: #333;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.forgot-password-modal .forgot-password-input {
+  border-radius: 8px;
+  padding: 8px;
+  font-size: 14px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.forgot-password-cancel-button {
+  border-radius: 8px;
+  background-color: #dcdcdc;
+  color: #333;
+  font-weight: bold;
+}
+
+.forgot-password-submit-button {
+  border-radius: 8px;
+  background-color: #3da9fc;
+  color: #fff;
+  font-weight: bold;
+}
+
+.forgot-password-submit-button:hover {
+  background-color: #63ceff;
+}

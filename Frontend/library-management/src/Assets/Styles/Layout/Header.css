@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Dancing+Script:wght@700&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&family=Lobster&family=Satisfy&display=swap');
+
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #00c5fc,#fffb8bdb, #00ff80);
+  padding: 10px 20px;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right:0;
+  z-index: 1000;
+  flex-wrap: wrap;
+  height: 8vh;
+}
+
+/*-----Phần đầu-----*/
+.Header-Left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  justify-content: flex-start;
+  background-color: #fff;
+  background: linear-gradient(45deg, #1aff72, #00fff2); 
+  border-radius: 100px; /* Bo góc nhẹ */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  height: 50px;
+}
+
+.Header-Title2-Container{
+  width: 80px;
+  height: 70px;
+  border-radius: 55%;
+  border: 1px solid 76e6d9ce;
+  background: linear-gradient(90deg, #00c6fcdb, #2bfe94);
+  font-style: initial;
+  position: relative;
+  animation: glowing-border 3s infinite;
+  overflow: hidden;
+}
+
+.Header-Title2-Container::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  padding: 2px; /* Adjust the thickness of the glowing border */
+  background: linear-gradient(
+    90deg,
+    #020201a2,
+    rgba(0, 132, 255, 0.8),
+    rgba(255, 19, 19, 0.8)
+  );
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: destination-out;
+  animation: border-glow 2s linear infinite;
+}
+
+@keyframes border-glow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+.Header-Title2-TDU {
+  font-size: 19px;
+  font-family: 'Great Vibes', cursive;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  display: flex;
+  font-weight: bolder;
+}
+
+.Header-Title2-Library {
+  font-size: 19px;
+  font-family: 'Pacifico', cursive; /* Complementary script font */
+  color: #e0e0e0;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  letter-spacing: 1px;
+  margin-top: -8px;
+  text-transform:initial;
+}
+
+.Header-Title2 {
+  font-style:italic; /* Chữ nghiêng để tăng tính chuyên nghiệp */
+  color: #ff8d8d; /* Xanh nhạt tạo cảm giác hiện đại */
+  text-align: center; /* Căn giữa */
+  text-shadow: 
+    2px 2px 4px rgb(252, 78, 78), /* Bóng mờ nhấn nhẹ phía sau */
+    -2px -2px 6px rgb(255, 255, 87); /* Hiệu ứng bóng ngược để tăng chiều sâu */
+  background: linear-gradient(45deg, hsl(114, 100%, 50%), hsl(249, 100%, 50%), #ff0033, #ffffff); /* Hiệu ứng gradient từ xanh nhạt đến xanh lam */
+  background-clip: text;
+  -webkit-text-fill-color: transparent; /* Làm chữ trong suốt để thấy gradient */
+  transform: skewX(-10deg); /* Nghiêng nhẹ chữ để tăng cảm giác chuyển động */
+  animation: shine 5s infinite ease-in-out; /* Hiệu ứng chuyển động ánh sáng */
+  padding: 5px 0px;
+  font-weight: bolder;
+}
+
+/* Hiệu ứng ánh sáng chạy qua chữ */
+@keyframes shine {
+  0% {
+    background-position: -200px;
+  }
+  50% {
+    background-position: 200px;
+  }
+  100% {
+    background-position: -200px;
+  }
+}
+
+.Header-Left, .Header-Icons {
+  max-width: 100%; /* Đảm bảo các phần tử không vượt quá 100% chiều rộng */
+}
+
+.Header-Icons {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 18px;
+  flex: 1;
+}
+
+.Header-Icon {
+  font-size: 22px;
+  color: #ffffffdd; /* Màu icon */
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.Header-Icon:hover {
+  transform: scale(1.2); /* Phóng to icon khi hover */
+  color: #ff8d8d; /* Màu đổi khi hover */
+}
+
+
+/*-----Phần giữa-----*/
+.Header-Center {
+  flex: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.Header-Center input{
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.Search-Bar {
+  display: flex;
+  width: 80%;
+  padding: 10px 0px 10px 10px;
+  border: 1px solid #76e6d9; /* Đường viền nhạt */ 
+  border-radius: 50px;
+  font-size: 14px;
+  box-shadow: 0 2px 5px rgba(255, 0, 0, 0.2);
+  text-shadow: 1px 1px 2px rgba(255, 101, 101, 0.2);
+}
+
+.Header-Center .Search-Dropdown {
+  background: linear-gradient(45deg, #00fff2,#fffb8bdb); 
+  border: 1px solid #76e6d9; /* Đường viền nhạt */ 
+  padding: 8px;
+  font-size: 14px;
+  color: white;
+  cursor: pointer;
+  font-family: 'Courier New', Courier, monospace;
+  transition: background-color 0.3s ease;
+  border-radius: 50px;
+}
+
+/* Viền mặc định của dropdown */
+.Search-Dropdown {
+  border: 2px solid #ccc; /* Viền mặc định */
+  padding: 8px 12px;
+  border-radius: 5px;
+  background-color: #fff; /* Màu nền */
+  font-size: 14px;
+  transition: border-color 0.3s ease; /* Hiệu ứng chuyển màu viền khi focus */
+}
+
+/* Khi focus vào dropdown */
+.Search-Dropdown:focus {
+  outline: none; /* Tắt viền mặc định (outline) */
+  border-color: #93928c99; /* Màu viền khi focus */
+  box-shadow: 0 0 5px rgba(43, 254, 148, 0.7); /* Thêm hiệu ứng bóng khi focus */
+}
+
+.Search-Dropdown option {
+  background-color: #00fff2;  /* Giữ tông màu cho các options */
+  color: white;
+}
+
+.Search-Dropdown option:checked {
+  background-color: #2bfe94; /* Thay đổi màu nền khi chọn mục */
+  color: #fff; /* Màu chữ khi chọn */
+}
+
+.Header-Search {
+  flex-grow: 2;
+  padding: 10px;
+  border: none;
+  border-radius: 15px;
+  font-size: 14px;
+  box-shadow: 0 2px 5px rgba(255, 0, 0, 0.2);
+  text-shadow: 1px 1px 2px rgba(255, 101, 101, 0.2);
+  margin-left: 10px;  /* Khoảng cách giữa input và dropdown */
+}
+
+.Header-Search::placeholder{
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bolder;
+  color: #76e6d9ce;
+  font-style: italic;
+}
+
+.Header-Search:focus{
+  box-shadow: 0px 0px 10px rgba(0, 119, 182, 0.4);
+  outline: none; /* Tắt viền mặc định (outline) */
+  border-color: #2bfe94; /* Màu viền khi focus */
+}
+
+
+/* Thêm style cho button tìm kiếm */
+.Search-Button {
+  background: linear-gradient(90deg,#fffb8bdb, #00ff80);
+  border: none;
+  border-radius: 15px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  margin-left: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Hiệu ứng chuyển màu nền và hiệu ứng chuyển động */
+}
+
+.Search-Button:hover {
+  background:linear-gradient(90deg,#eeff55db, #ff7d99); /* Màu nền khi hover */
+  transform: scale(1.05); /* Tạo hiệu ứng phóng to nhẹ */
+}
+.Search-Button i {
+  font-size: 16px;  /* Giảm kích thước icon cho button */
+}
+
+/*-----Phần Cuối-----*/
+.Header-Right {
+  display: flex;
+  flex:1;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(45deg, #00fff2,#1aff72); 
+  border-radius: 100px; /* Bo góc nhẹ */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  height: 50px;
+}
+
+.Profile{
+  width: 75px;  /* Kích thước ảnh đại diện */
+  height: 75px; /* Kích thước ảnh đại diện */
+  border-radius: 55%;
+  border: 1px solid 76e6d9ce;
+  background: linear-gradient(90deg, #00c6fcdb, #2bfe94);
+  font-style: initial;
+  animation: glowing-border 3s infinite;
+  overflow: hidden;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #76e6d9ce;  /* Viền nhẹ xung quanh ảnh */
+}
+
+.Profile-Img {
+  width: 100%; /* Đảm bảo ảnh lấp đầy box */
+  height: 100%; /* Đảm bảo ảnh lấp đầy box */
+  object-fit: cover; /* Cắt và căn giữa ảnh để khớp với box */
+  display: flex;
+  cursor: pointer;
+  border-radius: 50%; /* Đảm bảo ảnh là hình tròn */
+}
+
+/* Menu Profile */
+.Profile-Menu {
+  position: absolute;
+  top: 100%; /* Đặt menu ngay dưới ảnh đại diện */
+  right: -80px;
+  transform: translateX(-50%); /* Căn giữa menu */
+  background: white;
+  border-radius: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 150px; /* Kích thước menu */
+  display: flex;
+  flex-direction: column;
+  z-index: 100; /* Đảm bảo menu hiển thị trên các phần tử khác */
+  padding: 10px;
+  min-width: 150px;
+}
+
+/* Các mục trong menu */
+.Profile-Menu-Item {
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #00f7ff;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  border-radius: 50px;
+}
+
+.Profile-Menu-Item:hover {
+  background-color: #00f7ff; /* Thêm hiệu ứng hover */
+  color: #ffffff;
+}
+
+
+
+.Header-Right .Header-Icons{
+  display: flex;
+  gap: 30px;
+  flex: 1;
+}

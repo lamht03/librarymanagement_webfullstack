@@ -1,0 +1,156 @@
+/* Import Fonts and Libraries */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+
+/* Global Styles */
+.Styled-Input::placeholder {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  color: #b0b0b0;
+  opacity: 1;
+}
+
+/* Animations */
+@keyframes pen-animation {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+@keyframes book-animation {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fade-in-smooth {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 5px #0066cc, 0 0 10px #0066cc; }
+  to { text-shadow: 0 0 10px #0066cc, 0 0 15px #3da9fc; }
+}
+
+
+/* Fade In Effect for Various Elements */
+.Login-Wrapper,
+.Login-Form-Side,
+.Image-Side,
+.Login-Logo,
+.Header-Title,
+.Styled-Input,
+.Login-Button,
+.Forgot-Password-Link,
+.Quote-Container {
+  opacity: 0;
+  animation: fade-in-smooth 1s ease-in-out forwards;
+}
+
+.Login-Wrapper {
+  animation-delay: 0.1s;
+}
+
+.Login-Form-Side {
+  animation-delay: 0.2s;
+}
+
+.Image-Side {
+  animation-delay: 0.3s;
+}
+
+.Login-Logo {
+  animation-delay: 0.4s;
+}
+
+.Header-Title {
+  animation-delay: 0.5s;
+}
+
+.Styled-Input {
+  animation-delay: 0.6s;
+}
+
+.Login-Button {
+  animation-delay: 0.7s;
+}
+
+.Forgot-Password-Link {
+  animation-delay: 0.8s;
+}
+
+.Quote-Container {
+  animation-delay: 0.9s;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .Login-Wrapper {
+    flex-direction: column;
+    width: 80%;
+    height: auto;
+    border-radius: 50px;
+  }
+
+  .Login-Form-Side {
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .Login-Form{
+    margin-right: 35px;
+  }
+
+  .Image-Side {
+    display: none;
+  }
+
+  .Header-Title {
+    font-size: 28px;
+  }
+
+  .Styled-Input, .Login-Button {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .Header-Title {
+    font-size: 16px;
+  }
+
+  .Styled-Input, .Login-Button {
+    font-size: 12px;
+  }
+
+  .Quote-Text {
+    font-size: 12px;
+  }
+
+  .Quote-Author {
+    font-size: 11px;
+  }
+}
+
+/* Switch Mode */
+.Switch-Mode {
+  margin-top: 10px;
+  color: #000000;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* Fade Out Effect */
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
