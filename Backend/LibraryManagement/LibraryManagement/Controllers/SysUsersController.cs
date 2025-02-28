@@ -311,7 +311,7 @@ namespace LibraryManagement.Controllers
 
 
         [CustomAuthorize(8, "ManageUsers")]
-        [HttpPost("Delete User")]
+        [HttpPost("Delete User By ID")]
         public async Task<IActionResult> Delete(int userId)
         {
             var existingUser = await _userRepository.GetByID(userId);
